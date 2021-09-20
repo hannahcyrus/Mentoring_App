@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg4"
+    tools:context=".welcome_stud">
+
+  <LinearLayout
+      android:layout_width="500dp"
+      android:layout_height="500dp"
+      android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/et"
+        android:gravity="center"
+        android:text="Enter your details"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/mentName"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Mentors's name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876" />
+
+    <EditText
+        android:id="@+id/studName"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Student name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <EditText
+        android:id="@+id/usn_et"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="USN"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794" />
+
+    <EditText
+        android:id="@+id/batch_et"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Batch"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <EditText
+        android:id="@+id/bGroup"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Blood Group"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <EditText
+        android:id="@+id/Fname"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Father's name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.161" />
+
+    <EditText
+        android:id="@+id/Gcontact"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Parent/Guardian contact details"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.237" />
+
+    <EditText
+        android:id="@+id/Padd"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Permanent address"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.314" />
+
+    <EditText
+        android:id="@+id/Cadd"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Current address"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.396" />
+
+    <EditText
+        android:id="@+id/aadharNo"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Aadhar no."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <EditText
+        android:id="@+id/mob"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Mobile no."
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558" />
+
+    <EditText
+        android:id="@+id/Fjob"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Father's occupation"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.639" />
+
+    <EditText
+        android:id="@+id/Mjob"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Mother's occupation"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+
+    <EditText
+        android:id="@+id/mtong"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Mother Tongue"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/lang"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Languages known"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/hobb"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Hobbies"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/describe"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Briefly describe your strengths and challenges"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/career"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="What are your career aspirations?"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/res_10"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="10th(SSLC) Result"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/res_12"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="12th(PUC) Result"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/res_dip"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="Diploma/any other degree result(if any)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/res_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="1st semester result(SGPA)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/res_2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="2nd semester result(SGPA)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <TextView
+        android:id="@+id/arr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/edit_text"
+        android:text="Any arrears in previous semester:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/arr_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="1st semester"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <EditText
+        android:id="@+id/arr_2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:hint="2nd semester"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="140dp"
+        android:layout_height="43dp"
+        android:text="UPDATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+  </LinearLayout>
+
+
+</ScrollView>

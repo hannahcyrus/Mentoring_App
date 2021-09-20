@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:layout_marginTop="25dp">
+
+    <TextView
+        android:id="@+id/tv_mentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mentor name"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+      <TextView
+          android:id="@+id/tv_studName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="student name"
+          android:textSize="16sp"
+          android:layout_marginLeft="25dp"
+          android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_usn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" usn"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_batch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="batch"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_bgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="blood group"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_fname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="father name"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_gcont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="guardian contact"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_padd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="permanent address"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_cadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="current address"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_aadhar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aadhar no."
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mobile"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_fjob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="father job"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_mjob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mother job"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_mtong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mother tongue"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="languages"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_hobby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hobbies"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    v
+    <TextView
+        android:id="@+id/tv_strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="strengths and weakness"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_career"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aspirations"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10th marks"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12th marks"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="diploma marks"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1st sem marks"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2nd sem marks"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1st sem arrear"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/tv_a2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2nd sem arrear"
+        android:textSize="16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"/>
+
+
+
+
+
+
+
+  </LinearLayout>
+</ScrollView>
