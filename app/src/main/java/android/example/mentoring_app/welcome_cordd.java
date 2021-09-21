@@ -52,7 +52,8 @@ public class welcome_cordd extends AppCompatActivity implements AdapterView.OnIt
         Spinner spinner = findViewById(R.id.spinner1);
         Spinner spinner2 = findViewById(R.id.spinner2);
         dref= FirebaseDatabase.getInstance().getReference("mentor list");
-        dref2= FirebaseDatabase.getInstance().getReference("students"); // students database ref
+        dref2= FirebaseDatabase.getInstance().getReference("students");// students database ref
+
         list= new ArrayList<String>();
         adapter=new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,list);
         spinner.setAdapter(adapter);
@@ -78,10 +79,20 @@ fetchData();
                 insertData();
             }
         });
-
+delete.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        deleteData();
+    }
+});
 
 
     }
+
+    private void deleteData() {
+        dref.removeValue();
+
+   }
 
     private void insertData() {
         String data = addMent.getText().toString().trim();
@@ -121,32 +132,33 @@ fetchData();
         //Yes speak
 
 
-        dref2.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                studentSpinnerList.clear();
-//try catch block(stack trace)
-                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    Students students = dataSnapshot.getValue(Students.class);
-                    StudentSem studentSem = new StudentSem(students.getStudName(), students.getSem());
-                    studentSpinnerList.add(studentSem);
-                }
-
-                // Attach this list to the spinner or recycler view adapter
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.d(TAG, "onCancelled: "+error.getMessage());
-                Log.d(TAG, "onCancelled: "+error.getDetails());
-            }
-        });
+//        dref2.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                studentSpinnerList.clear();
+////try catch block(stack trace)
+//                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+//                    Students students = dataSnapshot.getValue(Students.class);
+//                    StudentSem studentSem = new StudentSem(students.getStudName(), students.getSem());
+//                    studentSpinnerList.add(studentSem);
+//                }
+//
+//                // Attach this list to the spinner or recycler view adapter
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+////                Log.d(TAG, "onCancelled: "+error.getMessage());
+////                Log.d(TAG, "onCancelled: "+error.getDetails());
+//            }
+//        });
 
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         switch (position){
+           // case 1:dref3 = FirebaseDatabase.getInstance().getReference("students").child("1st sem");
 
 
                     }

@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.135"
+        app:layout_constraintVertical_bias="0.128"
         app:srcCompat="@mipmap/image" />
 
     <ImageView
@@ -40,18 +40,18 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/et"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Full Name"
         android:inputType="textPersonName"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
         android:paddingLeft="10dp"
-        android:drawablePadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424" />
+        app:layout_constraintVertical_bias="0.517" />
 
     <EditText
         android:id="@+id/emailReg_et"
@@ -63,17 +63,39 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/et"
         android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint=" Email Address"
-        android:paddingLeft="10dp"
-        android:drawablePadding="10dp"
         android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54" />
+        app:layout_constraintVertical_bias="0.637" />
+
+    <EditText
+        android:id="@+id/sem"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/et"
+        android:drawableLeft="@drawable/ic_baseline_arrow_right_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Semester"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.637" />
 
     <EditText
         android:id="@+id/passwordReg_et"
@@ -95,7 +117,7 @@
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintVertical_bias="0.763" />
 
     <Button
         android:id="@+id/register_bt"
@@ -113,5 +135,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.794" />
+        app:layout_constraintVertical_bias="0.899" />
+
+    <EditText
+        android:id="@+id/tv1"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/et"
+
+        android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="USN"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/fullName_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 </androidx.constraintlayout.widget.ConstraintLayout>

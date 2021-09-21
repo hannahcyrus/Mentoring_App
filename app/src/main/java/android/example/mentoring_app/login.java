@@ -24,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class login extends AppCompatActivity implements View.OnClickListener {
     private TextView createAcc,ForgotPswd;
-    private EditText email,pswd;
+    private EditText email,pswd,id;
     private Button login;
     private FirebaseAuth appAuth;
     private String name= "";
@@ -40,12 +40,22 @@ public class login extends AppCompatActivity implements View.OnClickListener {
         email=(EditText)findViewById(R.id.email_ment);
         pswd=(EditText)findViewById(R.id.password_et);
         login=(Button)findViewById(R.id.login_bt);
+        id=findViewById(R.id.usn);
         login.setOnClickListener(this);
 
         if (getIntent().hasExtra("name")){
+
             name = getIntent().getStringExtra("name");
         }
+        if (name.equals("coordinator") || name.equals("mentor")) {
+            id.setVisibility(View.INVISIBLE);
+        }
+        if (name.equals("student")) {
+            email.setVisibility(View.INVISIBLE);
+        }
 
+
+        
         appAuth=FirebaseAuth.getInstance();
     }
 
