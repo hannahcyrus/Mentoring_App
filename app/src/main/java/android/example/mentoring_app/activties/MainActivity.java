@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.example.mentoring_app.R;
 import android.example.mentoring_app.SessionManagement;
+import android.example.mentoring_app.models.Students;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,6 +54,25 @@ SessionManagement sessionManagement;
 
                             }
                         });
+                    }
+
+                    int flag = 0;
+                    for (DataSnapshot datasnapshot:
+                         snapshot.getChildren()) {
+                        Students students = datasnapshot.getValue(Students.class);
+                        String usn = "abcd";
+
+                        if (usn.equals(students.getUsn())){
+                            flag = 1;
+                            break;
+                        }
+                    }
+
+                    if (flag ==1 ) {
+                        //Start an Activity
+                    }
+                    else{
+                        //Invalid credential
                     }
                 }
 
