@@ -1,4 +1,4 @@
-package android.example.mentoring_app;
+package android.example.mentoring_app.activties;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.example.mentoring_app.R;
 import android.example.mentoring_app.databinding.ActivityWelcomeMentTrialBinding;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class welcome_ment_trial extends AppCompatActivity {
+public class WelcomeMentTrialActivty extends AppCompatActivity {
     ActivityWelcomeMentTrialBinding binding;
     DatabaseReference reference;
     private static final int REQUEST_CALL =1;
@@ -49,7 +50,7 @@ public class welcome_ment_trial extends AppCompatActivity {
                 if(!usn.isEmpty()){
                     readData(usn);
                 }else{
-                    Toast.makeText(welcome_ment_trial.this,"enter the usn",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WelcomeMentTrialActivty.this,"enter the usn",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -59,8 +60,8 @@ public class welcome_ment_trial extends AppCompatActivity {
     private void CallButton() {
         String number = callText.getText().toString();
         if(number.trim().length()>0) {
-            if (ContextCompat.checkSelfPermission(welcome_ment_trial.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(welcome_ment_trial.this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+            if (ContextCompat.checkSelfPermission(WelcomeMentTrialActivty.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(WelcomeMentTrialActivty.this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
             }else {
                 String dial = "tel:" + number;
                 startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
@@ -87,7 +88,7 @@ public class welcome_ment_trial extends AppCompatActivity {
             public void onComplete(@NonNull  Task<DataSnapshot> task) {
                 if(task.isSuccessful()){
                     if(task.getResult().exists()){
-                        Toast.makeText(welcome_ment_trial.this,"data fetched",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WelcomeMentTrialActivty.this,"data fetched",Toast.LENGTH_SHORT).show();
                         DataSnapshot snapshot =task.getResult();
                         String mentName= String.valueOf(snapshot.child("mentName").getValue());
                         String studName= String.valueOf(snapshot.child("studName").getValue());

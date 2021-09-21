@@ -1,4 +1,4 @@
-package android.example.mentoring_app;
+package android.example.mentoring_app.models;
 
 public class User {
     private String Email_user, Fullname_user, Password_user;

@@ -1,15 +1,18 @@
-package android.example.mentoring_app;
+package android.example.mentoring_app.activties;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.example.mentoring_app.R;
+import android.example.mentoring_app.SessionManagement;
+import android.example.mentoring_app.models.Students;
+import android.example.mentoring_app.models.User;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,12 +21,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class create_acc extends AppCompatActivity implements View.OnClickListener {
+public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth appAuth;
     private EditText fullName, email, password, semester;
     private Button register;
     private EditText tv;
     private String name;
+    SessionManagement sessionManagement;
 
 
     @Override
@@ -31,6 +35,8 @@ public class create_acc extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_acc);
         appAuth = FirebaseAuth.getInstance();
+
+        sessionManagement = new SessionManagement(this);
 
         fullName = (EditText) findViewById(R.id.fullName_et);
         email = (EditText) findViewById(R.id.emailReg_et);
@@ -112,11 +118,11 @@ public class create_acc extends AppCompatActivity implements View.OnClickListene
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
-                                            Toast.makeText(create_acc.this, "user has been registered successfully!", Toast.LENGTH_LONG).show();
-                                            startActivity(new Intent(create_acc.this, login.class));
+                                            Toast.makeText(CreateAccountActivity.this, "user has been registered successfully!", Toast.LENGTH_LONG).show();
+                                            startActivity(new Intent(CreateAccountActivity.this, LoginActivity.class));
 
                                         } else {
-                                            Toast.makeText(create_acc.this, "failed to register!Try again", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(CreateAccountActivity.this, "failed to register!Try again", Toast.LENGTH_LONG).show();
 
                                         }
 
@@ -128,8 +134,30 @@ public class create_acc extends AppCompatActivity implements View.OnClickListene
                     });
         }
         else{
-            if()
 
+            String key = FirebaseDatabase.getInstance().getReference("students").push().getKey();
+
+//            Students user = new Students(key,"", add the rest of the data);
+            Students user = new Students();
+
+            FirebaseDatabase.getInstance().getReference("students").child(key).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()) {
+
+                        // Cache the data
+                        sessionManagement.setStudentUID(key);
+                        sessionManagement.setStudentUSN(user.getUsn());
+
+
+
+                    } else {
+                        Toast.makeText(CreateAccountActivity.this, "Failed to register!Try again", Toast.LENGTH_LONG).show();
+
+                    }
+
+                }
+            });
 
         }
     }

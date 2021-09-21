@@ -1,4 +1,4 @@
-package android.example.mentoring_app;
+package android.example.mentoring_app.models;
 
 public class Students {
     public Students(String mentName, String studName, String usn, String batch, String bgroup, String fatherName, String guardianContact, String permAdd, String currAdd, String aadhar, String mobile, String fatherJob, String motherJob, String motherTong, String languages, String hobbie, String strength, String aspirations, String res10, String res12, String resDip, String res1, String res2, String arr1, String arr2) {
@@ -96,7 +96,7 @@ public class Students {
         return res2;
     }
 
-    public Students(String sem, String mentName, String studName, String usn, String batch, String bgroup, String fatherName, String guardianContact, String permAdd, String currAdd, String aadhar, String mobile, String fatherJob, String motherJob, String motherTong, String languages, String hobbie, String strength, String aspirations, String res10, String res12, String resDip, String res1, String res2,String arr1, String arr2) {
+    public Students(String studentUid, String sem, String mentName, String studName, String usn, String batch, String bgroup, String fatherName, String guardianContact, String permAdd, String currAdd, String aadhar, String mobile, String fatherJob, String motherJob, String motherTong, String languages, String hobbie, String strength, String aspirations, String res10, String res12, String resDip, String res1, String res2,String arr1, String arr2) {
         this.mentName = mentName;
         this.studName = studName;
         this.usn = usn;
@@ -123,6 +123,7 @@ public class Students {
         this.arr1 = arr1;
         this.arr2 = arr2;
         this.sem = sem;
+        this.studentUid = studentUid;
     }
 
 
@@ -136,6 +137,13 @@ public class Students {
 
     public String getSem() {
         return sem;
+    }
+
+    public String getStudentUid() {
+        return studentUid;
+    }
+
+    public Students() {
     }
 
     String mentName;
@@ -164,6 +172,7 @@ public class Students {
     String  res1;
     String res2;
     String sem;
+    String studentUid;
 
 
 }

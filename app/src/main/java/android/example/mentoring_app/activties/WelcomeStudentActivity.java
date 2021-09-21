@@ -1,9 +1,11 @@
-package android.example.mentoring_app;
+package android.example.mentoring_app.activties;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.example.mentoring_app.R;
+import android.example.mentoring_app.models.Students;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +16,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class welcome_stud extends AppCompatActivity  {
+public class WelcomeStudentActivity extends AppCompatActivity  {
     private EditText ment_name,stud_name,Usn,Batch,bloodGroup,FatherName,GuardianContact,PermAdd,CurrAdd,Aadhar,Mobile,FatherJob,MotherJob,MotherTong,Languages,Hobbies,Strength,Aspirations,Res10,Res12,ResDip,Res1,Res2,Arr1,Arr2;
     private TextView arrear;
     private Button update;
@@ -57,7 +59,7 @@ public class welcome_stud extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 insertStudentData();
-                AlertDialog.Builder builder=new AlertDialog.Builder(welcome_stud.this);
+                AlertDialog.Builder builder=new AlertDialog.Builder(WelcomeStudentActivity.this);
                 builder.setTitle("Exit");
                 builder.setMessage("You cannot edit once submitted");
                 builder.setCancelable(false);

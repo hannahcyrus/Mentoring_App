@@ -1,8 +1,9 @@
-package android.example.mentoring_app;
+package android.example.mentoring_app.activties;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.example.mentoring_app.R;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -14,7 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class forgot_pswd extends AppCompatActivity {
+public class ForgotPasswordActivity extends AppCompatActivity {
     private EditText emailFrgt;
     private Button reset;
     FirebaseAuth appAuth;
@@ -51,9 +52,9 @@ public class forgot_pswd extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(forgot_pswd.this,"Check your email to reset the password",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ForgotPasswordActivity.this,"Check your email to reset the password",Toast.LENGTH_LONG).show();
                 }else {
-                    Toast.makeText(forgot_pswd.this,"Try again!!Something went wrong!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ForgotPasswordActivity.this,"Try again!!Something went wrong!",Toast.LENGTH_LONG).show();
                 }
 
             }

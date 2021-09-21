@@ -1,4 +1,4 @@
-package android.example.mentoring_app;
+package android.example.mentoring_app.models;
 
 public class StudentSem {
 

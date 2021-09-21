@@ -11,13 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mentoring_App">
-        <activity android:name=".login" />
-        <activity android:name=".welcome_cordd" />
-        <activity android:name=".welcome_ment_trial" />
-        <activity android:name=".welcome_stud" />
-        <activity android:name=".forgot_pswd" />
-        <activity android:name=".create_acc" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activties.LoginActivity" />
+        <activity android:name=".activties.WelcomeCoordinatorActivity" />
+        <activity android:name=".activties.WelcomeMentTrialActivty" />
+        <activity android:name=".activties.WelcomeStudentActivity" />
+        <activity android:name=".activties.ForgotPasswordActivity" />
+        <activity android:name=".activties.CreateAccountActivity" />
+        <activity android:name=".activties.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

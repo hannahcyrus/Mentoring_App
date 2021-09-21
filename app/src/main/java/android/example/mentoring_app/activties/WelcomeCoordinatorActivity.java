@@ -1,11 +1,12 @@
-package android.example.mentoring_app;
+package android.example.mentoring_app.activties;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.example.mentoring_app.R;
+import android.example.mentoring_app.models.StudentSem;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,10 +24,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.sql.Array;
 import java.util.ArrayList;
 
-public class welcome_cordd extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class WelcomeCoordinatorActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Button assign,edit,view;
     private EditText addMent,deleteMent;
     private Button add,delete;
@@ -66,7 +66,7 @@ public class welcome_cordd extends AppCompatActivity implements AdapterView.OnIt
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(welcome_cordd.this,MainActivity.class));
+                startActivity(new Intent(WelcomeCoordinatorActivity.this,MainActivity.class));
             }
         });
 
@@ -104,7 +104,7 @@ delete.setOnClickListener(new View.OnClickListener() {
                         list.clear();
                         fetchData();
                         adapter.notifyDataSetChanged();
-                        Toast.makeText(welcome_cordd.this,"sucessfully added",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WelcomeCoordinatorActivity.this,"sucessfully added",Toast.LENGTH_SHORT).show();
 
 
                     }

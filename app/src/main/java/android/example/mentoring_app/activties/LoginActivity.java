@@ -1,9 +1,10 @@
-package android.example.mentoring_app;
+package android.example.mentoring_app.activties;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.example.mentoring_app.R;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -22,7 +23,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class login extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView createAcc,ForgotPswd;
     private EditText email,pswd,id;
     private Button login;
@@ -63,7 +64,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.create_tv:
-                Intent intent = new Intent(login.this,create_acc.class);
+                Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
                 intent.putExtra("name", name);
                 startActivity(intent);
                 break;
@@ -71,7 +72,7 @@ public class login extends AppCompatActivity implements View.OnClickListener {
                 loginUser();
                 break;
             case R.id.forgot_tv:
-                startActivity(new Intent(login.this,forgot_pswd.class));
+                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
         }
     }
 
@@ -115,15 +116,15 @@ public class login extends AppCompatActivity implements View.OnClickListener {
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 int userType_user=snapshot.getValue(Integer.class);
                                 if (userType_user==0){
-                                    startActivity(new Intent(login.this,welcome_stud.class));
+                                    startActivity(new Intent(LoginActivity.this, WelcomeStudentActivity.class));
 
                                 }
                                 if(userType_user==1){
-                                    startActivity(new Intent(login.this,welcome_cordd.class));
+                                    startActivity(new Intent(LoginActivity.this, WelcomeCoordinatorActivity.class));
 
                                 }
                                 if(userType_user==2){
-                                    startActivity(new Intent(login.this,welcome_ment_trial.class));
+                                    startActivity(new Intent(LoginActivity.this, WelcomeMentTrialActivty.class));
 
                                 }
 
@@ -136,13 +137,13 @@ public class login extends AppCompatActivity implements View.OnClickListener {
                         });
                    }else{
                         user.sendEmailVerification();
-                        Toast.makeText(login.this,"check your email to verify your account",Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this,"check your email to verify your account",Toast.LENGTH_LONG).show();
                     }
 
 
                }
                 else{
-                    Toast.makeText(login.this,"failed to login!Try again",Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this,"failed to login!Try again",Toast.LENGTH_LONG).show();
                 }
 
             }
